@@ -1,0 +1,19 @@
+@import "variables";
+
+@font-face {
+    font-family: Work;
+    src: url('../assets/fonts/WorkSans-VariableFont_wght.ttf');
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $font-family;
+    font-size: $paragraph-size;
+    font-weight: $regular-weight;
+    color: $clr-grayish-purple;
+}

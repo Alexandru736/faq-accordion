@@ -1,0 +1,124 @@
+@import "global";
+@import "variables";
+
+body {
+    background-color: $clr-light-pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 8rem 2rem;
+    background-image: url('../assets/images/background-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    width: 100%;
+
+    main {
+        background-color: $clr-white;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 2rem;
+        gap: 2rem;
+        max-width: 320px;
+
+        .title {
+            display: flex;
+            gap: 1rem;
+
+            .title-icon {
+                width: 10%;
+            }
+
+            .title-text {
+                color: $clr-dark-purple;
+            }
+        }
+
+        .faq-questions {
+            list-style: none;
+
+            .question-item {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .question {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+
+                    .question-text {
+                        color: $clr-dark-purple;
+                        font-size: 1rem;
+                    }
+
+                    .btn {
+                        background-color: $clr-white;
+                        border: none;
+
+                        .expand-icon {
+                            width: 25px;
+                        }
+
+                        .expand-icon[aria-hidden="true"] {
+                            display: none;
+                        }
+
+                        .shrink-icon {
+                            width: 25px;
+                        }
+
+                        .shrink-icon[aria-hidden="true"] {
+                            display: none;
+                        }
+                    }
+                }
+
+                .answer {
+                    font-size: .8rem;
+                }
+
+                .answer[aria-hidden="true"] {
+                    display: none;
+                }
+            }
+
+            .question-item:not(:first-child) {
+                margin-top: 2rem;
+                padding-top: 2rem;
+                border-top: 1px solid $clr-light-pink;
+            }
+        }
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        background-image: url('../assets/images/background-pattern-desktop.svg');
+        
+        main {
+            max-width: 500px;
+
+            .title {
+                .title-icon {
+                    width: 8%;
+                }
+
+                .title-text {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        footer {
+            display: block;
+        }
+    }
+}
